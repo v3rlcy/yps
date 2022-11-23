@@ -53,7 +53,7 @@ session_start();
             <h4 class="my-0 fw-normal">Data Dokter</h4>
           </div>
           <div class="card-body">
-            <p>Berisikan data - data dokter di YPS Hospital</p>
+            <p>Lihat Daftar Dokter Disini!</p>
             <a class="w-100 btn btn-primary" href="./src/page/dokter/dokter.php">Masuk</a>
           </div>
         </div>
@@ -83,7 +83,7 @@ session_start();
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm border-danger">
           <div class="card-header py-3 text-bg-danger border-danger">
-            <h4 class="my-0 fw-normal">Rekam Medis</h4>
+            <h4 class="my-0 fw-normal">Rekam Medis Pasien</h4>
           </div>
           <div class="card-body">
             <p>Anda dapat melihat riwayat atau rekam medis pasien</p>
@@ -98,17 +98,17 @@ session_start();
           </div>
           <div class="card-body">
             <p>Berisikan data mengenai obat yang ada</p>
-            <a class="w-100 btn btn-primary" href="./src/page/data_obat/data:{}">Masuk</a>
+            <a class="w-100 btn btn-primary" href="./src/page/data_obat/data_obat.php">Masuk</a>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm border-primary">
           <div class="card-header py-3 text-bg-primary border-primary">
-            <h4 class="my-0 fw-normal">Rm obat ni tulis ape cok</h4>
+            <h4 class="my-0 fw-normal">Rekam Medis Obat</h4>
           </div>
           <div class="card-body">
-            <p>Bantu pikir rm obat cok</p>
+            <p>Atur pemakaian obat mu disini!</p>
             <a class="w-100 btn btn-primary" href="./src/page/rm_obat/rm_obat.php">Masuk</a>
           </div>
         </div>
