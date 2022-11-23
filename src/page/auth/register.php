@@ -6,7 +6,7 @@ if (isset($_POST["register"])) {
   if (registrasi($_POST) > 0) {
     echo "<script>
             alert('Registrasi Berhasil');
-            document.location.href = 'login.php';
+            document.location.href = './login.php';
           </script>";
   } else {
     echo mysqli_error($conn);
@@ -31,6 +31,22 @@ if (isset($_POST["register"])) {
   integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <h2 class="navbar-brand" href="#">YPS Hospital</h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" aria-current="page" href="../../../index.php">Home</a>
+          <a class="nav-link" href="login.php">Login</a>
+          <a class="nav-link" href="register.php">Register</a>
+        </div>
+      </div>
+    </div>
+  </nav>
   <div class="container pt-3 mt-5">
     <h1 style="text-align:center;">YPS Hospital</h1>
     <form action="send.php" method="post">
