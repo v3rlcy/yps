@@ -84,7 +84,7 @@ if(isset($_POST["cari"])){
                   </div>
           </form>
       </div>
-      <a class="btn btn-primary" href="tambah_dokter.php">Tambah list poliklinik</a>
+      <a class="btn btn-primary" href="tambah_poli.php">Tambah list poliklinik</a>
 
     <div class ="text-end">
         <button class="btn btn-outline-info">
