@@ -23,34 +23,50 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <h1>Tambah Data pasien</h1>
+    <title>Tambah data Obat</title>
+    
 </head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <body>
 
-    <form action="" method="POST">
-        <li><label for="id_pasien">ID Pasien :</label>
-        <input type="text" name="id_pasien" id="id_pasien" required></li>
+<div class="container mt-5">
+        <h1>Tambah Data Pasien</h1
+        <form action="" method="POST">
+        
+        <div class="form-group">
+            <label for="id_pasien">ID Pasien :</label>
+            <input type="text" name="id_pasien" id="id_pasien" required class="form-control">
+        </div>
 
-        <li><label for="nomor_identitas">Nomor Identitas :</label>
-        <input type="text" name="nomor_identitas" id="nomor_identitas" required></li>
+        <div class="form-group">
+            <label for="nomor_identitas">Nomor Identitas :</label>
+            <input type="text" name="nomor_identitas" id="nomor_identitas" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="nama_pasien">Nama Pasien :</label>
+            <input type="text" name="nama_pasien" id="nama_pasien" class="form-control" required></li>
+            
 
-        <li><label for="nama_pasien">Nama Pasien :</label>
-        <input type="text" name="nama_pasien" id="nama_pasien" required></li>
+        <div class="form-group">
+            <label for="alamat">Alamat :</label>
+            <input type="text" name="alamat" id="alamat" class="form-control" required>
+        </div>
 
-        <li><label for="jenis_kelamin">Jenis Kelamin :</label>
-        <input type="radio" id="L" name="jenis_kelamin" value="L">
-        <label for="L">Laki-Laki</label>
-        <input type="radio" id="L" name="jenis_kelamin" value="P">
-        <label for="P">Perempuan</label></li>
+        <div class="form-group">
+            <label for="no_telpon">No. Telepon :</label>
+            <input type="text" name="no_telpon" id="no_telpon" class="form-control" required>
+        </div>
 
-        <li><label for="alamat">Alamat :</label>
-        <input type="text" name="alamat" id="alamat" required></li>
+        <div class="form-group mt-3 mb-3">
+            <label for="jenis_kelamin">Jenis Kelamin :</label>
+            <input type="radio" id="L" name="jenis_kelamin" value="L">
+            <label for="L">Laki-Laki</label>
+            <input type="radio" id="L" name="jenis_kelamin" value="P">
+            <label for="P">Perempuan</label></li>
+        </div>
 
-        <li><label for="no_telpon">No. Telepon :</label>
-        <input type="text" name="no_telpon" id="no_telpon" required></li>
-
-        <button type="submit" name="submit">Tambah Data Obat</button>
+        <button type="submit" name="submit" class="btn btn-success">Tambah Data Obat</button>
     </form>
     
 </body>

@@ -83,7 +83,9 @@ if(isset($_POST["cari"])){
                         <input type="text" name="keyword" class="form-control" autofocus placeholder="Masukkan keyword pencaharian" autocomplete="off" id="keyword">
                         <button class="btn btn-info" type="submit" name="cari" id="tombol-cari">Cari!</button>
                     </div>
+                </div>
             </form>
+                
         <a class="btn btn-primary" href="tambah_dokter.php">Tambah data dokter</a>
 
         <div class ="text-end">
