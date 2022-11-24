@@ -1,4 +1,14 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+
+
 $conn = mysqli_connect("localhost", "root", "", "rumah_sakit");
 function query($query)
 {
@@ -64,42 +74,63 @@ function registrasi($data)
 {
   global $conn;
 
-  $username = strtolower(stripslashes($data["username"]));
   $nama = strtolower(stripslashes($data["nama_user"]));
+  $email = strtolower(stripslashes($data["email"]));
   $password = mysqli_real_escape_string($conn, $data["password"]);
   $password2 = mysqli_real_escape_string($conn, $data["password2"]);
 
+  $mail = new PHPMailer(true);
+  try {
+    $mail->SMTPDebug = 0;
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'myoshu.me@gmail.com';
+    $mail->Password = 'afarwubsicceswxk';
+    $mail->SMPTSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+    $mail->setFrom('myoshu.me@gmail.com', 'YPS Hospital');
+    $mail->addAddress($email, $nama);
+    $mail->isHTML(true);
+    $verification_code = substr(number_format(time() * rand(), 0, '', ''), 0, 6);
+    $mail->Subject = 'Email Verification';
+    $mail->Body = "Hi $nama, <br><br> Your verification code is $verification_code";
+    $mail->send();
 
-  // cek username
-  $result = mysqli_query($conn, "SELECT username FROM tb_user WHERE 
-    username = '$username'");
+    // cek Email
+    $result = mysqli_query($conn, "SELECT email FROM tb_user WHERE 
+    email = '$email'");
 
-  if (mysqli_fetch_assoc($result)) {
-    echo "<script>
-            alert('Username sudah terdaftar!');
+    if (mysqli_fetch_assoc($result)) {
+      echo "<script>
+            alert('Email sudah terdaftar!');
           </script>";
-    return false;
-  }
+      return false;
+    }
 
-  // konfirmasi password
-  if ($password !== $password2) {
-    echo "<script>
+    // konfirmasi password
+    if ($password !== $password2) {
+      echo "<script>
             alert('Konfirmasi password tidak sesuai!');
           </script>";
-    return false;
+      return false;
+    }
+
+    // enkripsi password
+    $hashPass = password_hash($password, PASSWORD_DEFAULT);
+
+    // tambahkan user baru ke database
+    mysqli_query($conn, "INSERT INTO tb_user VALUES ('', '$nama', '$email', '$hashPass', 'user', '$verification_code', NULL)");
+    header("Location: verification.php?email=" . $email);
+
+    return mysqli_affected_rows($conn);
+  } catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
   }
-
-  // enkripsi password
-  $hashPass = password_hash($password, PASSWORD_DEFAULT);
-
-  // tambahkan user baru ke database
-  mysqli_query($conn, "INSERT INTO tb_user VALUES ('', '$nama', '$username', '$hashPass', 'user')");
-
-  return mysqli_affected_rows($conn);
 }
 
 //send mail
-function sendMail($data){
+/*function sendMail($data){
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
@@ -123,4 +154,4 @@ function sendMail($data){
     </script>;
     ";
 
-};
+};*/
