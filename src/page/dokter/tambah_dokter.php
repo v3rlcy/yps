@@ -23,29 +23,50 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <h1>Tambah Data Obat</h1>
+    <title>Tambah data Obat</title>
+    
 </head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <body>
 
-    <form action="" method="POST">
-        <li><label for="id_dokter">ID Dokter :</label>
-        <input type="text" name="id_dokter" id="id_dokter" required></li>
+<div class="container mt-5">
+        <h1>Tambah Data Obat</h1
+        
+        <form action="" method="POST">
+       
+        <div class="form-group">
+            <label for="id_dokter">ID Dokter :</label>
+            <input type="text" name="id_dokter" id="id_dokter" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="nama_dokter">Nama Dokter :</label>
+            <input type="text" name="nama_dokter" id="nama_dokter" class="form-control" required>
+        </div>
 
-        <li><label for="nama_dokter">Nama Dokter :</label>
-        <input type="text" name="nama_dokter" id="nama_dokter" required></li>
+        <div class="form-group">
+            <label for="spesialis">Spesialis :</label>
+            <input type="text" name="spesialis" id="spesialis" class="form-control" required>
+        </div>
 
-        <li><label for="spesialis">Spesialis :</label>
-        <input type="text" name="spesialis" id="spesialis" required></li>
+        <div clsass="form-group">
+            <label for="alamat">Alamat :</label>
+            <input type="text" name="alamat" id="alamat" class="form-control" required>
+        </div>
 
-        <li><label for="alamat">Alamat :</label>
-        <input type="text" name="alamat" id="alamat" required></li>
+        <div class="form-group">
+            <label for="no_telpon">No. Telepon :</label>
+            <input type="text" name="no_telpon" id="no_telpon" class="form-control" required>
+        </div>
+        
+            <button class="btn btn-primary mt-3" type="submit" name="submit">Tambah Data Obat</button>
+        </form>
 
-        <li><label for="no_telpon">No. Telepon :</label>
-        <input type="text" name="no_telpon" id="no_telpon" required></li>
-
-        <button type="submit" name="submit">Tambah Data Obat</button>
-    </form>
-    
+        <div class ="text-end">
+            <button class="btn btn-outline-info">
+            <a href="../../page/dokter/tambah_dokter.php">KEMBALI</a>
+            </button>
+    </div>
+    </div>
 </body>
 </html>

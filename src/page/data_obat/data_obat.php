@@ -1,122 +1,46 @@
 <?php
 require '../../function.php';
-<<<<<<< HEAD
 $obat = query("SELECT * FROM tb_obat");
 
 if(isset($_POST["cari"])){
     $obat = cariobat($_POST["keyword"]);
-=======
 // require '..\function.php';
 $obat = query("SELECT * FROM tb_obat");
 
 if (isset($_POST["cari"])) {
   $obat = cariObat($_POST["keyword"]);
->>>>>>> aedbd801d38c08c80f8806171d8dcee7d755b466
+}
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-
-    <h1 class = "text-center">LIST OBAT</h1>
+    <title>Data Dokter</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-
-<div class="container">
-
-    <div>
-    <form action="" method="post">
-        <input type="text" name="keyword" size = 40 placeholder = "Search..." autocomplete = "off" class="outline-dark">
-        <button type="submit" name="cari" class="btn btn-primary">Search</button>
-    </form>
-    </div>
-
-    <div class ="text-end">
-        <button class="btn btn-outline-info">
-        <a href="tambah_obat.php">TAMBAHKAN DATA</a>
-        </button>
-    </div>
-
-    <div class ="text-end">
-        <button class="btn btn-outline-info">
-        <a href="../../../index.php">KEMBALI</a>
-        </button>
-    </div>
-
-</div>
-
-<table border=1 cellpadding=20 cellspacing=0 class="table table-bordered">
-    <tr class="table-primary">
-        <th>No.</th>
-        <th>Aksi</th>
-        <th>Nama Obat</th>
-        <th>Keterangan Obat</th>
-    </tr>
-
-    <?php $i = 1;
-    foreach ($obat as $row) : ?>
-    <tr>
-    <td><?= $row['id_obat']; ?></td>
-    <td>
-        <button class="btn btn-outline-danger">
-        <a href="hapus_obat.php?id_obat=<?= $row['id_obat'] ?>">HAPUS</a>
-        </button>
-        <button class="btn btn-outline-info">
-        <a href="ubah_obat.php?id_obat=<?= $row['id_obat'] ?>">UBAH</a>
-        </button>
-    </td>
-    <td><?= $row['nama_obat']; ?></td>
-    <td><?= $row['ket_obat']; ?></td>
-    <?php endforeach; ?>
-    </tr>
-</table>
-
-
-</body>
-</html>
-=======
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<style> 
-body{
-  background-color: #d9d9d9;
-}
-
-.wrapper {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-}
-
+<style>
+    .wrapper {
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+    }
 </style>
-
 <body>
 
 <div class="wrapper">
-  <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-light" style="height: 1080px; width: 280px;">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    
+  <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-light" id="sidebar" style="height: 1080px; width: 280px;">
+      <a href="..\..\..\" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
         <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
         <span class="fs-4 text-dark fw-bold">YPS Hospital</span>
       </a>
       <hr>
       
-
       <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
         <li>
@@ -144,15 +68,14 @@ body{
         </li>
 
         <li>
-          <a href="../../page/data_obat/data_obat.php" class="nav-link active text-light aria-current="page"">Data Obat
+          <a href="../../page/data_obat/data_obat.php" class="nav-link active text-light aria-current="page">Data Obat
           </a>
         </li>  
 
         <li>
-          <a href="../../page/data_obat/data_obat.php" class="nav-link text-dark">Rm obat ni tulis ape cok
+          <a href="../../page/data_obat/data_obat.php" class="nav-link text-dark">Rm obat ni tulis ape
           </a>
-        </li>  
-
+        </li>
       </ul>
       <hr>
     </div>
@@ -172,7 +95,7 @@ body{
                   </div>
           </form>
       </div>
-      <a class="btn btn-primary" href="tambah.php">Tambah Daftar Obat</a>
+      <a class="btn btn-primary" href="tambah.php">Tambah data Dokter</a>
 
   
       <table class="table table-bordered border-primary text-center mt-2">
@@ -196,10 +119,14 @@ body{
           <?php endforeach; ?>
           </tr>
         </table>
-  </div> 
+      </div> 
+    </div>
 </div>
 </body>
 
+<<<<<<< HEAD
+</html>
+=======
 </html>
 
 <!-- hapus obat -->
@@ -207,7 +134,7 @@ body{
 <?php
 
 $id_obat = $_GET["id_obat"];
-if(hapusobat($id_obat) > 0 ){
+if(hapusObat($id_obat) > 0 ){
     echo "<script>
                 alert ('data obat berhasil dihapus');
                 document.location.href = 'dataobat.php';
@@ -270,4 +197,3 @@ if (isset($_POST["submit"])) {
 </body>
 
 </html>
->>>>>>> aedbd801d38c08c80f8806171d8dcee7d755b466

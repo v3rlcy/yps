@@ -25,6 +25,7 @@ if(isset($_POST["submit"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <h1>Tambah Data Poliklinik</h1>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -41,5 +42,11 @@ if(isset($_POST["submit"])){
         <button type="submit" name="submit">Tambah Data Poliklinik</button>
     </form>
     
+    <div class ="text-end">
+            <button class="btn btn-outline-info">
+            <a href="../../page/poliklinik/poliklinik.php">KEMBALI</a>
+            </button>
+    </div>
+
 </body>
 </html>
