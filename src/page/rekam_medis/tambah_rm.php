@@ -1,6 +1,11 @@
 <?php
 require '../../function.php';
 
+$tbrm = query('SELECT id_rm FROM rekam_medis'); 
+$tb_obat = query('SELECT nama_obat FROM tb_obat');
+$pasien = query('SELECT nama_pasien FROM pasien');
+$dokter = query('SELECT nama_dokter FROM dokter');
+
 if(isset($_POST["submit"])){
     if(tambahrm($_POST) > 0 ){
         echo "<script>
@@ -24,18 +29,24 @@ if(isset($_POST["submit"])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <h1>Tambah Data Rekam_Medis</h1>
 </head>
 <body>
-    <form action="" method="POST">
+
+    <h1>Tambah Data Rekam Medis</h1>
+    <div class="container">
+        <form action="" method="post">
+            <div class = ></div>
+        </form>
+    </div>
+    <!-- <form action="" method="POST">
     <div>
     <select name="nama_pasien" id="nama_pasien" required>
     <option selected value=""></option>
     <?php
-    $pasien = mysqli_query($conn, "SELECT * FROM pasien") or die (mysqli_error($conn));
-        while($data_pasien = mysqli_fetch_array($pasien)){
-            echo '<option value="'.$data_pasien['id_pasien'].'">'.$data_pasien['nama_pasien'].'</option>';
-        }
+    // $pasien = mysqli_query($conn, "SELECT * FROM pasien") or die (mysqli_error($conn));
+        // while($data_pasien = mysqli_fetch_array($pasien)){
+            // echo '<option value="'.$data_pasien['id_pasien'].'">'.$data_pasien['nama_pasien'].'</option>';
+        // }
     ?>
     </select>
     <label>Pilih Nama Pasien!</label>
@@ -49,10 +60,10 @@ if(isset($_POST["submit"])){
     <select name="nama_dokter" id="nama_dokter" required>
     <option selected value=""></option>
     <?php
-    $dokter = mysqli_query($conn, "SELECT * FROM dokter") or die (mysqli_error($conn));
-        while($data_dokter = mysqli_fetch_array($dokter)){
-            echo '<option value="'.$data_dokter['id_dokter'].'">'.$data_dokter['nama_dokter'].'</option>';
-        }
+    // $dokter = mysqli_query($conn, "SELECT * FROM dokter") or die (mysqli_error($conn));
+        // while($data_dokter = mysqli_fetch_array($dokter)){
+            // echo '<option value="'.$data_dokter['id_dokter'].'">'.$data_dokter['nama_dokter'].'</option>';
+        // }
     ?>
     </select>
     <label>Pilih Nama Dokter!</label>
@@ -65,10 +76,10 @@ if(isset($_POST["submit"])){
     <select name="nama_poli" id="nama_poli" required>
     <option selected value=""></option>
     <?php
-    $poli = mysqli_query($conn, "SELECT * FROM poliklinik") or die (mysqli_error($conn));
-        while($data_poli = mysqli_fetch_array($poli)){
-            echo '<option value="'.$data_poli['id_poli'].'">'.$data_poli['nama_poli'].'</option>';
-        }
+    // $poli = mysqli_query($conn, "SELECT * FROM poliklinik") or die (mysqli_error($conn));
+        // while($data_poli = mysqli_fetch_array($poli)){
+            // echo '<option value="'.$data_poli['id_poli'].'">'.$data_poli['nama_poli'].'</option>';
+        // }
     ?>
     </select>
     <label>Pilih Poliklinik!</label>
@@ -88,7 +99,7 @@ if(isset($_POST["submit"])){
     </div>
 
     <button type="submit" name="submit">Tambah Data</button>
-    </form> 
+    </form>  -->
     
 </body>
 </html>

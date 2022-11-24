@@ -102,16 +102,7 @@ session_start();
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm border-primary">
-          <div class="card-header py-3 text-bg-primary border-primary">
-            <h4 class="my-0 fw-normal">Rekam Medis Obat</h4>
-          </div>
-          <div class="card-body">
-            <p>Atur pemakaian obat mu disini!</p>
-            <a class="w-100 btn btn-primary" href="./src/page/rm_obat/rm_obat.php">Masuk</a>
-          </div>
-        </div>
+    
       </div>
     </div>
   </div>

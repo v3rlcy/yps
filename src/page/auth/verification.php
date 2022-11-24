@@ -33,11 +33,16 @@ if (isset($_POST['verify'])) {
 </head>
 
 <body>
-  <form action="" method="POST">
-    <input type="hidden" name="email" value="<?= $_GET['email'] ?>" required>
-    <input type="text" name="verification" id="verification" placeholder="Enter verification code" required>
-    <button type="submit" name="verify">Verify</button>
-  </form>
+  <div class="container mt-5">
+    <h1>Enter verification code</h1>
+    <form action="" method="POST">
+      <div class="form-group">
+        <input type="hidden" name="email" value="<?= $_GET['email'] ?>" required>
+        <input type="text" name="verification" id="verification" placeholder="Enter verification code" required class=form-control>
+        <button type="submit" name="verify" class="btn btn-warning mt-2 w-100">Verify</button>
+      </div>
+    </form>
+  </div>
 </body>
 
 </html>
