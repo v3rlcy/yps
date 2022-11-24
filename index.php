@@ -29,8 +29,8 @@ session_start();
           <a class="nav-link" aria-current="page" href="index.php">Home</a>
           <!-- Jika ada Session munculin menu dashboard dan logout, hilangakan login register -->
           <?php if (isset($_SESSION['login'])) : ?>
-          <a class="nav-link" aria-current="page" href="./src/page/dashboard.php">Dashboard</a>
-          <a class="nav-link" aria-current="page" href="./src/page/auth/logout.php">Logout</a>
+          <a class="nav-link" aria-current="page" href="#">Dashboard</a>
+          <a class="nav-link" aria-current="page" href="src/page/auth/logout.php">Logout</a>
           <?php else : ?>
           <!-- Jika tidak ada session munculin menu login dan register -->
           <a class="nav-link" href="./src/page/auth/login.php">Login</a>
