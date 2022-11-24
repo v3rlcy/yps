@@ -313,7 +313,20 @@ function caripoli($keyword)
 
 // CRUD REKAM MEDIS
 // tambah_rm
+function tambahrm($data)
+{
+  global $conn;
+  $nama_pasien = htmlspecialchars($data["nama_pasien"]);
+  $keluhan = htmlspecialchars($data["keluhan"]);
+  $nama_dokter = htmlspecialchars($data["nama_dokter"]);
+  $diagnosa = htmlspecialchars($data["diagnosa"]);
+  $nama_poli = htmlspecialchars($data["nama_poli"]);
+  $nama_obat = htmlspecialchars($data["nama_obat"]);
 
+  $query = "INSERT INTO rekam_medis VALUES ('', '$nama_pasien', '$keluhan', '$nama_dokter', '$diagnosa', '$nama_poli', '$nama_obat')";
+  mysqli_query($conn, $query);
+  return mysqli_affected_rows($conn);
+}
 
 // hapus_rm
 function hapusrm($id_rm)
