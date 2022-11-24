@@ -23,14 +23,14 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah data Obat</title>
+    <title>Tambah data Dokter</title>
     
 </head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <body>
 
 <div class="container mt-5">
-        <h1>Tambah Data Obat</h1
+        <h1>Tambah Data Dokter</h1
         
         <form action="" method="POST">
        
@@ -59,12 +59,12 @@ if(isset($_POST["submit"])){
             <input type="text" name="no_telpon" id="no_telpon" class="form-control" required>
         </div>
         
-            <button class="btn btn-primary mt-3" type="submit" name="submit">Tambah Data Obat</button>
+            <button class="btn btn-primary mt-3 w-100" type="submit" name="submit">Tambah Data Dokter</button>
         </form>
 
         <div class ="text-end">
-            <button class="btn btn-outline-info">
-            <a href="../../page/dokter/tambah_dokter.php">KEMBALI</a>
+            <button class="btn btn-outline-info mt-2">
+            <a href="../../page/dokter/dokter.php">KEMBALI</a>
             </button>
     </div>
     </div>

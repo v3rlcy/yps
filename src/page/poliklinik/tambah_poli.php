@@ -23,27 +23,36 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <h1>Tambah Data Poliklinik</h1>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Tambah data Poliklinik</title>
+    
 </head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <body>
 
-    <form action="" method="POST">
-        <li><label for="id_poli">ID Poliklinik :</label>
-        <input type="text" name="id_poli" id="id_poli" required></li>
+<div class="container mt-5">
+        <h1>Tambah Data Poliklinik</h1
+        <form action="" method="POST">
+        
+        <div class="form-group">
+            <label for="id_poli">ID Poliklinik :</label>
+            <input type="text" name="id_poli" id="id_poli" class="form-control" required>
+        </div>
 
-        <li><label for="nama_poli">Nama Poliklinik :</label>
-        <input type="text" name="nama_poli" id="nama_poli" required></li>
+        <div class="form-group">
+            <label for="nama_poli">Nama Poliklinik :</label>
+            <input type="text" name="nama_poli" id="nama_poli" class="form-control" required>
+        </div>
 
-        <li><label for="gedung">Gedung :</label>
-        <input type="text" name="gedung" id="gedung" required></li>
+        <div class="form-group">
+            <label for="gedung">Gedung :</label>
+            <input type="text" name="gedung" id="gedung" class="form-control" required>
+        </div>
 
-        <button type="submit" name="submit">Tambah Data Poliklinik</button>
+        <button type="submit" name="submit" class="btn btn-warning w-100 mt-3">Tambah Data Poliklinik</button>
     </form>
     
     <div class ="text-end">
-            <button class="btn btn-outline-info">
+            <button class="btn btn-outline-info mt-2">
             <a href="../../page/poliklinik/poliklinik.php">KEMBALI</a>
             </button>
     </div>

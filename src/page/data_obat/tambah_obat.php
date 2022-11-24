@@ -32,24 +32,24 @@ if(isset($_POST["submit"])){
 <div class="container pt-3 mt-5">
     <form action="" method="POST">
     <div class="form-outline mb-4">
-        <li><label class="form-label" for="id_obat">ID Obat :</label>
-        <input class="form-control" type="text" name="id_obat" id="id_obat" required></li>
+        <label class="form-label" for="id_obat">ID Obat :</label>
+        <input class="form-control" type="text" name="id_obat" id="id_obat" required>
     </div>
     <div class="form-outline mb-4">
-        <li><label class="form-label" for="nama_obat">Nama Obat :</label>
-        <input class="form-control" type="text" name="nama_obat" id="nama_obat" required></li>
+        <label class="form-label" for="nama_obat">Nama Obat :</label>
+        <input class="form-control" type="text" name="nama_obat" id="nama_obat" required>
     </div>
     <div class="form-outline mb-4">
-        <li><label class="form-label" for="ket_obat">Keterangan Obat :</label>
-        <input class="form-control" type="text" name="ket_obat" id="ket_obat" required></li>
+        <label class="form-label" for="ket_obat">Keterangan Obat :</label>
+        <input class="form-control" type="text" name="ket_obat" id="ket_obat" required>
     </div>
     <div class="mb-4">
-      <button type="submit" class="btn btn-primary btnm-block mb-4 w-100" name="submit">Tambah Data Obat</button>
+      <button type="submit" class="btn btn-primary btnm-block w-100 mt-3" name="submit">Tambah Data Obat</button>
     </div>
     </form>
 
     <div class ="text-end">
-            <button class="btn btn-outline-info">
+            <button class="btn btn-outline-info mt-2">
             <a href="../../page/data_obat/data_obat.php">KEMBALI</a>
             </button>
     </div>
