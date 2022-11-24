@@ -85,7 +85,7 @@ if(isset($_POST["cari"])){
                   </div>
           </form>
       </div>
-      <a class="btn btn-primary" href="tambah_dokter.php">Tambah list pasien</a>
+      <a class="btn btn-primary" href="tambah_pasien.php">Tambah list pasien</a>
 
     <label> Jenis Kelamin : </label>
     <input type="radio" id="L" name="jenis_kelamin" value="L">
