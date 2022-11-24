@@ -72,10 +72,6 @@ if (isset($_POST["cari"])) {
           </a>
         </li>  
 
-        <li>
-          <a href="../../page/data_obat/data_obat.php" class="nav-link text-dark">Rm obat ni tulis ape
-          </a>
-        </li>
       </ul>
       <hr>
     </div>
@@ -95,7 +91,7 @@ if (isset($_POST["cari"])) {
                   </div>
           </form>
       </div>
-      <a class="btn btn-primary" href="tambah.php">Tambah data Dokter</a>
+      <a class="btn btn-primary" href="tambah_obat.php">Tambah data obat</a>
 
   
       <table class="table table-bordered border-primary text-center mt-2">
@@ -111,8 +107,8 @@ if (isset($_POST["cari"])) {
           <tr>
             <td><?= $row['id_obat']; ?></td>
             <td>
-                <a class="btn btn-danger" href="hapusobat.php?id_obat=<?= $row['id_obat'] ?>">HAPUS</a>
-                <a class="btn btn-info" href="ubahobat.php?id_obat=<?= $row['id_obat'] ?>">UBAH</a>
+                <a class="btn btn-danger" href="hapus_obat.php?id_obat=<?= $row['id_obat'] ?>">HAPUS</a>
+                <a class="btn btn-info" href="ubah_obat.php?id_obat=<?= $row['id_obat'] ?>">UBAH</a>
             </td>
             <td><?= $row['nama_obat']; ?></td>
             <td><?= $row['ket_obat']; ?></td>

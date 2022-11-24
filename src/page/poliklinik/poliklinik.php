@@ -64,11 +64,6 @@ if(isset($_POST["cari"])){
           <a href="../../page/data_obat/data_obat.php" class="nav-link text-dark">Data Obat
           </a>
         </li>  
-
-        <li>
-          <a href="../../page/data_obat/data_obat.php" class="nav-link text-dark">Rm obat ni tulis ape
-          </a>
-        </li>
       </ul>
       <hr>
     </div>

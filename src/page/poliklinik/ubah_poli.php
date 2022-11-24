@@ -26,23 +26,34 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ubah data Poliklinik</title>
+    
 </head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <body>
 
+<div class="container mt-5">
+<h1 class="mt-2">Ubah data poliklinik</h1>
 <form action="" method="post">
-    <input type="hidden" name="id_poli" id="id_poli" value = "<?= $data['id_poli'] ?>">
     
-    <li><label for="id_poli">ID Poliklinik :</label>
-    <input type="text" name="id_poli" id="id_poli" value = "<?= $data['id_poli']?>"></li>
+        <input type="hidden" name="id_poli" id="id_poli" value = "<?= $data['id_poli'] ?>">
+    
+    <div class="form-group">
+        <label for="id_poli">ID Poliklinik :</label>
+        <input type="text" name="id_poli" id="id_poli" value = "<?= $data['id_poli']?>" class="form-control">
+    </div>
 
-    <li><label for="nama_poli">Nama Poliklinik :</label>
-    <input type="text" name="nama_poli" id="nama_poli" value = "<?= $data['nama_poli']?>"></li>
+    <div class="form-group">
+        <label for="nama_poli">Nama Poliklinik :</label>
+        <input type="text" name="nama_poli" id="nama_poli" value = "<?= $data['nama_poli']?>" class="form-control">
+    </div>
 
-    <li><label for="gedung">Gedung :</label>
-    <input type="text" name="gedung" id="gedung" value = "<?= $data['gedung']?>"></li>
+    <div class="form-group">
+        <label for="gedung">Gedung :</label>
+        <input type="text" name="gedung" id="gedung" value = "<?= $data['gedung']?>" class="form-control">
+    </div>
 
-    <button type="submit" name="submit">Ubah Data Poliklinik</button>
+    <button type="submit" name="submit" class="btn btn-success w-100 mt-2">Ubah Data Poliklinik</button>
 
 </form>
 </body>

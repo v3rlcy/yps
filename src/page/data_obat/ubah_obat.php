@@ -27,23 +27,32 @@ if(isset($_POST['submit'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
+<div class="container mt-5">
+    <h1>Ubah data Obat</h1>
+    <form action="" method="post">
+            <input type="hidden" name="id_obat" id="id_obat" value = "<?= $data['id_obat'] ?>">
+        
+            <div class="form-group m>
+                <label for="id_obat">ID obat :</label>
+                <input type="text" name="id_obat" id="id_obat" value = "<?= $data['id_obat']?>" class="form-control">
+            </div>
 
-<form action="" method="post">
-    <input type="hidden" name="id_obat" id="id_obat" value = "<?= $data['id_obat'] ?>">
-    
-    <li><label for="id_obat">ID obat :</label>
-    <input type="text" name="id_obat" id="id_obat" value = "<?= $data['id_obat']?>"></li>
+            <div class="form-outline mb-4">
+                <label for="nama_obat">Nama Obat :</label>
+                <input type="text" name="nama_obat" id="nama_obat" value = "<?= $data['nama_obat']?>" class="form-control">
+            </div>
 
-    <li><label for="nama_obat">Nama Obat :</label>
-    <input type="text" name="nama_obat" id="nama_obat" value = "<?= $data['nama_obat']?>"></li>
+            <div class="form-outline mb-4">
+                <label for="ket_obat">Keterangan Obat :</label>
+                <input type="text" name="ket_obat" id="ket_obat" value = "<?= $data['ket_obat']?>" class="form-control">
+            </div>
 
-    <li><label for="ket_obat">Keterangan Obat :</label>
-    <input type="text" name="ket_obat" id="ket_obat" value = "<?= $data['ket_obat']?>"></li>
-
-    <button type="submit" name="submit">Ubah Data Obat</button>
-
-</form>
+        <button type="submit" name="submit" class="btn btn-info">Ubah Data Obat</button>
+    </form>
+</div>
 </body>
 </html>
