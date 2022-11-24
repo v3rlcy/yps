@@ -1,23 +1,15 @@
 <?php
-<<<<<<< HEAD
-
-require '../../function.php';
-=======
 require '../../function.php';
 $obat = query("SELECT * FROM tb_obat");
 
 if(isset($_POST["cari"])){
     $obat = cariobat($_POST["keyword"]);
->>>>>>> c0f969148d611c9cc0c058cc27721a0e0537bd32
 // require '..\function.php';
 $obat = query("SELECT * FROM tb_obat");
 
 if (isset($_POST["cari"])) {
   $obat = cariObat($_POST["keyword"]);
-<<<<<<< HEAD
-=======
 }
->>>>>>> c0f969148d611c9cc0c058cc27721a0e0537bd32
 }
 ?>
 
@@ -103,7 +95,7 @@ if (isset($_POST["cari"])) {
                   </div>
           </form>
       </div>
-      <a class="btn btn-primary" href="tambah.php">Tambah data siswa</a>
+      <a class="btn btn-primary" href="tambah_obat.php">Tambah Nama Obat</a>
 
   
       <table class="table table-bordered border-primary text-center mt-2">
