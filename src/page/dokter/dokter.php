@@ -91,7 +91,7 @@ if(isset($_POST["cari"])){
             <a href="../../../index.php">KEMBALI</a>
             </button>
 
-            <table class="table table-bordered border-primary text-center mt-2">
+            <table class="table table-bordered border-success text-center mt-2">
                 <tr class="table-success">
                     <th>No.</th>
                     <th>Aksi</th>
