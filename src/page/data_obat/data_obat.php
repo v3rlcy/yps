@@ -72,10 +72,6 @@ if (isset($_POST["cari"])) {
           </a>
         </li>  
 
-        <li>
-          <a href="../../page/rm_obat/rm_obat.php" class="nav-link text-dark">Rekam Medis Obat
-          </a>
-        </li>
       </ul>
       <hr>
     </div>
