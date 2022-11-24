@@ -279,3 +279,29 @@ function caripoli($keyword)
     ";
   return query($query);
 }
+//send mail
+function sendMail($data){
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'verlacya.001@ski.sch.id';
+    $mail->Password = 'axrwlfbppmhgoaqz';
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 465;
+
+    $mail->setFrom('verlacya.001@ski.sch.id');
+    $mail->addAddress($_POST["email"]);
+    $mail->isHTML(true);
+    $mail->Subject = "Registrasi";
+    $mail->Body = "Success!";
+
+    $mail->send();
+    
+    echo 
+    "
+    <script>
+    alert('Sent! Check your Email')
+    </script>;
+    ";
+
+};
