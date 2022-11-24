@@ -107,8 +107,8 @@ if (isset($_POST["cari"])) {
           <tr>
             <td><?= $row['id_obat']; ?></td>
             <td>
-                <a class="btn btn-danger" href="hapusobat.php?id_obat=<?= $row['id_obat'] ?>">HAPUS</a>
-                <a class="btn btn-info" href="ubahobat.php?id_obat=<?= $row['id_obat'] ?>">UBAH</a>
+                <a class="btn btn-danger" href="hapus_obat.php?id_obat=<?= $row['id_obat'] ?>">HAPUS</a>
+                <a class="btn btn-info" href="ubah_obat.php?id_obat=<?= $row['id_obat'] ?>">UBAH</a>
             </td>
             <td><?= $row['nama_obat']; ?></td>
             <td><?= $row['ket_obat']; ?></td>
