@@ -42,5 +42,11 @@ if(isset($_POST["submit"])){
         <button type="submit" name="submit">Tambah Data Poliklinik</button>
     </form>
     
+    <div class ="text-end">
+            <button class="btn btn-outline-info">
+            <a href="../../page/poliklinik/poliklinik.php">KEMBALI</a>
+            </button>
+    </div>
+
 </body>
 </html>

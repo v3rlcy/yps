@@ -68,6 +68,11 @@ if(isset($_POST["submit"])){
 
         <button type="submit" name="submit" class="btn btn-success">Tambah Data Obat</button>
     </form>
-    
+    <div class ="text-end">
+            <button class="btn btn-outline-info">
+            <a href="../../page/pasien/pasien.php">KEMBALI</a>
+            </button>
+    </div>
+
 </body>
 </html>

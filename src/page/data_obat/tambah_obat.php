@@ -24,22 +24,35 @@ if(isset($_POST["submit"])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <h1>Tambah Data Obat</h1>
+    <h1 style="text-align:center;">Tambah Data Obat</h1>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-
+<div class="container pt-3 mt-5">
     <form action="" method="POST">
-        <li><label for="id_obat">ID Obat :</label>
-        <input type="text" name="id_obat" id="id_obat" required></li>
-
-        <li><label for="nama_obat">Nama Obat :</label>
-        <input type="text" name="nama_obat" id="nama_obat" required></li>
-
-        <li><label for="ket_obat">Keterangan Obat :</label>
-        <input type="text" name="ket_obat" id="ket_obat" required></li>
-
-        <button type="submit" name="submit">Tambah Data Obat</button>
+    <div class="form-outline mb-4">
+        <li><label class="form-label" for="id_obat">ID Obat :</label>
+        <input class="form-control" type="text" name="id_obat" id="id_obat" required></li>
+    </div>
+    <div class="form-outline mb-4">
+        <li><label class="form-label" for="nama_obat">Nama Obat :</label>
+        <input class="form-control" type="text" name="nama_obat" id="nama_obat" required></li>
+    </div>
+    <div class="form-outline mb-4">
+        <li><label class="form-label" for="ket_obat">Keterangan Obat :</label>
+        <input class="form-control" type="text" name="ket_obat" id="ket_obat" required></li>
+    </div>
+    <div class="mb-4">
+      <button type="submit" class="btn btn-primary btnm-block mb-4 w-100" name="submit">Tambah Data Obat</button>
+    </div>
     </form>
-    
+
+    <div class ="text-end">
+            <button class="btn btn-outline-info">
+            <a href="../../page/data_obat/data_obat.php">KEMBALI</a>
+            </button>
+    </div>
+</div>
 </body>
 </html>
