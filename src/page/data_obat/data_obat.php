@@ -95,7 +95,7 @@ if (isset($_POST["cari"])) {
                   </div>
           </form>
       </div>
-      <a class="btn btn-primary" href="tambah_obat.php">Tambah Nama Obat</a>
+      <a class="btn btn-primary" href="tambah.php">Tambah data Dokter</a>
 
   
       <table class="table table-bordered border-primary text-center mt-2">
