@@ -46,35 +46,36 @@ body{
       <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
         <li>
-          <a href="..\index.php" class="nav-link text-dark">Dashboard</a>
+          <a href="..\..\..\" class="nav-link text-dark">Dashboard</a>
         </li>
+
         <li>
-          <a href="dataObat/dataobat.php" class="nav-link text-dark">Data Dokter
+          <a href="../../page/dokter/dokter.php" class="nav-link text-dark">Data Dokter
           </a>
         </li>
 
         <li>
-          <a href="dataObat/dataobat.php" class="nav-link text-dark">Data Pasien
+          <a href="../../page/pasien/pasien.php" class="nav-link text-dark">Data Pasien
           </a>
         </li>
         
         <li>
-          <a href="dataObat/dataobat.php" class="nav-link text-dark">Poli Klinik
+          <a href="../../page/poliklinik/poliklinik.php" class="nav-link text-dark">Poli Klinik
           </a>
         </li>
 
         <li>
-          <a href="dataObat/dataobat.php" class="nav-link text-dark">Rekam Medis
+          <a href="../../page/rekam_medis/rekam_medis.php" class="nav-link text-dark">Rekam Medis
           </a>
         </li>
 
         <li>
-          <a href="dataObat/dataobat.php" class="nav-link active text-light aria-current="page"">Data Obat
+          <a href="../../page/data_obat/data_obat.php" class="nav-link active text-light aria-current="page"">Data Obat
           </a>
         </li>  
 
         <li>
-          <a href="dataObat/dataobat.php" class="nav-link text-dark">Rm obat ni tulis ape cok
+          <a href="../../page/data_obat/data_obat.php" class="nav-link text-dark">Rm obat ni tulis ape cok
           </a>
         </li>  
 
