@@ -316,6 +316,7 @@ function caripoli($keyword)
 function tambahrm($data)
 {
   global $conn;
+  $id_rm = htmlspecialchars($data["id_rm"]);
   $nama_pasien = htmlspecialchars($data["nama_pasien"]);
   $keluhan = htmlspecialchars($data["keluhan"]);
   $nama_dokter = htmlspecialchars($data["nama_dokter"]);
@@ -323,7 +324,7 @@ function tambahrm($data)
   $nama_poli = htmlspecialchars($data["nama_poli"]);
   $nama_obat = htmlspecialchars($data["nama_obat"]);
 
-  $query = "INSERT INTO rekam_medis VALUES ('', '$nama_pasien', '$keluhan', '$nama_dokter', '$diagnosa', '$nama_poli', '$nama_obat')";
+  $query = "INSERT INTO rekam_medis VALUES ('$id_rm', '$nama_pasien', '$keluhan', '$nama_dokter', '$diagnosa', '$nama_poli', '$nama_obat')";
   mysqli_query($conn, $query);
   return mysqli_affected_rows($conn);
 }
