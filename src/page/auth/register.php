@@ -4,7 +4,9 @@ require '../../function.php';
 
 if (isset($_POST["register"])) {
   if (registrasi($_POST) > 0) {
-    sendMail($_POST);
+    echo "<script>
+            alert('User baru berhasil ditambahkan!');
+          </script>";
   } else {
     echo mysqli_error($conn);
   }
@@ -46,7 +48,7 @@ if (isset($_POST["register"])) {
   </nav>
   <div class="container pt-3 mt-5">
     <h1 style="text-align:center;">YPS Hospital</h1>
-    <form action="send.php" method="post">
+    <form action="" method="post">
 
       <div class="form-outline mb-4">
         <label class="form-label" for="nama">Nama</label>
@@ -54,7 +56,7 @@ if (isset($_POST["register"])) {
       </div>
 
       <div class="form-outline mb-4">
-        <label class="form-label" for="email">email</label>
+        <label class="form-label" for="email">Email</label>
         <input type="email" name="email" class="form-control" />
       </div>
 
