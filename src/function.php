@@ -129,6 +129,187 @@ function registrasi($data)
   }
 }
 
+// CRUD DOKTER
+// tambah dokter
+function tambahdokter($data)
+{
+  global $conn;
+  $id_dokter = htmlspecialchars($data["id_dokter"]);
+  $nama_dokter = htmlspecialchars($data["nama_dokter"]);
+  $spesialis = htmlspecialchars($data["spesialis"]);
+  $alamat = htmlspecialchars($data["alamat"]);
+  $no_telpon = htmlspecialchars($data["no_telpon"]);
+
+  $query = "INSERT INTO dokter VALUES ('$id_dokter','$nama_dokter','$spesialis', '$alamat', '$no_telpon')";
+  mysqli_query($conn, $query);
+  return mysqli_affected_rows($conn);
+}
+
+// hapus dokter
+function hapusDokter($id_dokter)
+{
+  global $conn;
+  $del = "DELETE FROM dokter WHERE id_dokter = '$id_dokter'";
+  mysqli_query($conn, $del);
+  return mysqli_affected_rows($conn);
+}
+
+// ubah dokter
+function ubahDokter($data)
+{
+  global $conn;
+  $id_dokter = $data["id_dokter"];
+  $id_dokter = htmlspecialchars($data["id_dokter"]);
+  $nama_dokter = htmlspecialchars($data["nama_dokter"]);
+  $spesialis = htmlspecialchars($data["spesialis"]);
+  $alamat = htmlspecialchars($data["alamat"]);
+  $no_telpon = htmlspecialchars($data["no_telpon"]);
+
+  $query = "UPDATE dokter SET 
+    id_dokter = '$id_dokter',
+    nama_dokter = '$nama_dokter',
+    spesialis = '$spesialis',
+    alamat = '$alamat',
+    no_telpon = '$no_telpon'
+    WHERE id_dokter = '$id_dokter'
+    ";
+
+  mysqli_query($conn, $query);
+  return mysqli_affected_rows($conn);
+}
+
+// cari dokter
+function caridokter($keyword)
+{
+  $query = "SELECT * FROM dokter WHERE 
+    id_dokter LIKE '%$keyword%' OR
+    nama_dokter LIKE '%$keyword%' OR
+    spesialis LIKE '%$keyword%' OR
+    alamat LIKE '%$keyword%' OR
+    no_telpon LIKE '%$keyword%'
+    ";
+  return query($query);
+}
+
+// CRUD PASIEN
+// tambah pasien
+function tambahpasien($data)
+{
+  global $conn;
+  $id_pasien = htmlspecialchars($data["id_pasien"]);
+  $nomor_identitas = htmlspecialchars($data["nomor_identitas"]);
+  $nama_pasien = htmlspecialchars($data["nama_pasien"]);
+  $jenis_kelamin = htmlspecialchars($data["jenis_kelamin"]);
+  $alamat = htmlspecialchars($data["alamat"]);
+  $no_telpon = htmlspecialchars($data["no_telpon"]);
+
+  $query = "INSERT INTO pasien VALUES ('$id_pasien', '$nomor_identitas', '$nama_pasien','$jenis_kelamin', '$alamat', '$no_telpon')";
+  mysqli_query($conn, $query);
+  return mysqli_affected_rows($conn);
+}
+
+// hapus pasien
+function hapusPasien($id_pasien)
+{
+  global $conn;
+  $del = "DELETE FROM pasien WHERE id_pasien = '$id_pasien'";
+  mysqli_query($conn, $del);
+  return mysqli_affected_rows($conn);
+}
+
+// ubah pasien
+function ubahPasien($data)
+{
+  global $conn;
+  $id_pasien = $data["id_pasien"];
+  $id_pasien = htmlspecialchars($data["id_pasien"]);
+  $nomor_identitas = htmlspecialchars($data["nomor_identitas"]);
+  $nama_pasien = htmlspecialchars($data["nama_pasien"]);
+  $jenis_kelamin = htmlspecialchars($data["jenis_kelamin"]);
+  $alamat = htmlspecialchars($data["alamat"]);
+  $no_telpon = htmlspecialchars($data["no_telpon"]);
+
+  $query = "UPDATE pasien SET 
+    id_pasien = '$id_pasien',
+    nomor_identitas = '$nomor_identitas',
+    nama_pasien = '$nama_pasien',
+    jenis_kelamin = '$jenis_kelamin',
+    alamat = '$alamat',
+    no_telpon = '$no_telpon'
+    WHERE id_pasien = '$id_pasien'
+    ";
+
+  mysqli_query($conn, $query);
+  return mysqli_affected_rows($conn);
+}
+
+// cari pasien
+function caripasien($keyword)
+{
+  $query = "SELECT * FROM pasien WHERE 
+    id_pasien LIKE '%$keyword%' OR
+    nomor_identitas LIKE '%$keyword%' OR
+    nama_pasien LIKE '%$keyword%' OR
+    jenis_kelamin LIKE '%$keyword%' OR
+    alamat LIKE '%$keyword%' OR
+    no_telpon LIKE '%$keyword%'
+    ";
+  return query($query);
+}
+
+// CRUD POLIKLINIK
+// tambah poliklinik
+function tambahpoli($data)
+{
+  global $conn;
+  $id_poli = htmlspecialchars($data["id_poli"]);
+  $nama_poli = htmlspecialchars($data["nama_poli"]);
+  $gedung = htmlspecialchars($data["gedung"]);
+
+  $query = "INSERT INTO poliklinik VALUES ('$id_poli','$nama_poli','$gedung')";
+  mysqli_query($conn, $query);
+  return mysqli_affected_rows($conn);
+}
+
+// hapus poli
+function hapuspoli($id_poli)
+{
+  global $conn;
+  $del = "DELETE FROM poliklinik WHERE id_poli = '$id_poli'";
+  mysqli_query($conn, $del);
+  return mysqli_affected_rows($conn);
+}
+
+// ubah poli
+function ubahpoli($data)
+{
+  global $conn;
+  $id_poli = $data["id_poli"];
+  $id_poli = htmlspecialchars($data["id_poli"]);
+  $nama_poli = htmlspecialchars($data["nama_poli"]);
+  $gedung = htmlspecialchars($data["gedung"]);
+
+  $query = "UPDATE poliklinik SET 
+    id_poli = '$id_poli',
+    nama_poli = '$nama_poli',
+    gedung = '$gedung'
+    WHERE id_poli = '$id_poli'
+    ";
+
+  mysqli_query($conn, $query);
+  return mysqli_affected_rows($conn);
+}
+
+// cari poli
+function caripoli($keyword)
+{
+  $query = "SELECT * FROM poliklinik WHERE 
+    id_poli LIKE '%$keyword%' OR
+    nama_poli LIKE '%$keyword%' OR
+    gedung LIKE '%$keyword%'
+    ";
+  return query($query);
+}
 //send mail
 /*function sendMail($data){
     $mail->isSMTP();
