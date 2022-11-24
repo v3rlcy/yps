@@ -24,7 +24,7 @@ if(isset($_POST["submit"])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <h1>Tambah Data Rekam_Medis</h1>
+    <h1>Tambah Data Rekam Medis</h1>
 </head>
 <body>
     <form action="" method="POST">
