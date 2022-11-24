@@ -81,6 +81,11 @@ if (isset($_POST['login'])) {
         <input type="password" name="password" class="form-control" />
       </div>
 
+      <div class="form-outline mb-4">
+        <input type="checkbox" name="remember"/>
+        <label class="form-label" for="remember">Remember Me</label>
+      </div>
+
       <!-- login button -->
       <div class="mb-4">
         <button type="submit" class="btn btn-success btn-block mb-4 w-100 " name="login">Log in</button>
