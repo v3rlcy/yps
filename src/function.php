@@ -9,7 +9,7 @@ require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 
 
-$conn = mysqli_connect("localhost", "root", "", "rumah_sakit");
+$conn = mysqli_connect("localhost", "root","", "rumah_sakit");
 function query($query)
 {
   global $conn;
@@ -231,13 +231,13 @@ function ubahPasien($data)
 
   $query = "UPDATE pasien SET 
     id_pasien = '$id_pasien',
-    nomor_identitas = '$nomor_identitas',
+    nomor_  identitas = '$nomor_identitas',
     nama_pasien = '$nama_pasien',
     jenis_kelamin = '$jenis_kelamin',
     alamat = '$alamat',
     no_telpon = '$no_telpon'
     WHERE id_pasien = '$id_pasien'
-    ";
+    ";    
 
   mysqli_query($conn, $query);
   return mysqli_affected_rows($conn);
@@ -316,6 +316,7 @@ function caripoli($keyword)
 function tambahrm($data)
 {
   global $conn;
+  $id_rm = $data["id_rm"];
   $nama_pasien = htmlspecialchars($data["nama_pasien"]);
   $keluhan = htmlspecialchars($data["keluhan"]);
   $nama_dokter = htmlspecialchars($data["nama_dokter"]);
@@ -323,7 +324,7 @@ function tambahrm($data)
   $nama_poli = htmlspecialchars($data["nama_poli"]);
   $nama_obat = htmlspecialchars($data["nama_obat"]);
 
-  $query = "INSERT INTO rekam_medis VALUES ('', '$nama_pasien', '$keluhan', '$nama_dokter', '$diagnosa', '$nama_poli', '$nama_obat')";
+  $query = "INSERT INTO rekam_medis VALUES ('$id_rm', '$nama_pasien', '$keluhan', '$nama_dokter', '$diagnosa', '$nama_poli', '$nama_obat')";
   mysqli_query($conn, $query);
   return mysqli_affected_rows($conn);
 }
