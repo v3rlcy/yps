@@ -4,13 +4,13 @@ require '../../function.php';
 if(isset($_POST["submit"])){
     if(tambahrm($_POST) > 0 ){
         echo "<script>
-                alert ('data poliklinik berhasil ditambahkan');
+                alert ('data berhasil ditambahkan');
                 document.location.href = 'rekam_medis.php';
                 </script>";
     }
     else {
         echo "<script>
-                alert ('data poliklinik tidak berhasil ditambahkan');
+                alert ('data tidak berhasil ditambahkan');
                 document.location.href = 'rekam_medis.php';
                 </script>";
     }
