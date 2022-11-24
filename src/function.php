@@ -310,6 +310,20 @@ function caripoli($keyword)
     ";
   return query($query);
 }
+
+// CRUD REKAM MEDIS
+// tambah_rm
+
+
+// hapus_rm
+function hapusrm($id_rm)
+{
+  global $conn;
+  $del = "DELETE FROM rekam_medis WHERE id_rm = '$id_rm'";
+  mysqli_query($conn, $del);
+  return mysqli_affected_rows($conn);
+}
+
 //send mail
 /*function sendMail($data){
     $mail->isSMTP();
