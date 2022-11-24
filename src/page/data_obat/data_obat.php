@@ -19,37 +19,28 @@ if (isset($_POST["cari"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-<div class="container">
-    <h1 class = "text-center">LIST OBAT</h1>
+    <title>Data Dokter</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<style> 
-body{
-  background-color: #d9d9d9;
-}
-
-.wrapper {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-}
-
+<style>
+    .wrapper {
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+    }
 </style>
-
 <body>
 
 <div class="wrapper">
-  <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-light" style="height: 1080px; width: 280px;">
+    
+  <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-light" id="sidebar" style="height: 1080px; width: 280px;">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
         <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
         <span class="fs-4 text-dark fw-bold">YPS Hospital</span>
       </a>
       <hr>
       
-
       <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
         <li>
@@ -77,15 +68,14 @@ body{
         </li>
 
         <li>
-          <a href="../../page/data_obat/data_obat.php" class="nav-link active text-light aria-current="page"">Data Obat
+          <a href="../../page/data_obat/data_obat.php" class="nav-link active text-light aria-current="page">Data Obat
           </a>
         </li>  
 
         <li>
           <a href="../../page/data_obat/data_obat.php" class="nav-link text-dark">Rm obat ni tulis ape
           </a>
-        </li>  
-
+        </li>
       </ul>
       <hr>
     </div>
@@ -130,6 +120,7 @@ body{
           </tr>
         </table>
       </div> 
+    </div>
 </div>
 </body>
 
